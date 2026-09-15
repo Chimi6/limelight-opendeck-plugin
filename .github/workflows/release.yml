@@ -22,7 +22,7 @@ jobs:
             runner: ubuntu-22.04-arm
     runs-on: ${{ matrix.runner }}
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
 
       - uses: dtolnay/rust-toolchain@stable
 
@@ -34,7 +34,7 @@ jobs:
       - name: Build
         run: packaging/build-binary.sh ${{ matrix.target }}
 
-      - uses: actions/upload-artifact@v4
+      - uses: actions/upload-artifact@v5
         with:
           name: binary-${{ matrix.target }}
           path: plugin/io.github.chimi6.limelight.sdPlugin/bin/limelight-openaction-${{ matrix.target }}
@@ -44,11 +44,11 @@ jobs:
     needs: build
     runs-on: ubuntu-22.04
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
 
       - uses: dtolnay/rust-toolchain@stable
 
-      - uses: actions/download-artifact@v4
+      - uses: actions/download-artifact@v5
         with:
           pattern: binary-*
           merge-multiple: true
