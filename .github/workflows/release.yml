@@ -60,7 +60,7 @@ jobs:
       - name: Release notes
         run: packaging/release-notes.sh "${GITHUB_REF_NAME#v}" > notes.md
 
-      - uses: softprops/action-gh-release@v2
+      - uses: softprops/action-gh-release@v3
         with:
           files: dist/*.zip
           body_path: notes.md
