@@ -1,0 +1,172 @@
+{
+	"$schema": "https://schemas.elgato.com/streamdeck/plugins/manifest.json",
+	"Name": "LimeLight",
+	"Author": "Chimi6",
+	"Version": "1.0.0",
+	"Description": "Control Elgato Key Light, Key Light Air, Key Light Mini, Ring Light and Light Strip through the LimeLight daemon.",
+	"URL": "https://github.com/Chimi6/limelight-opendeck-plugin",
+	"Icon": "images/plugin/icon",
+	"Category": "LimeLight",
+	"CategoryIcon": "images/category/icon",
+	"UUID": "io.github.chimi6.limelight",
+	"SDKVersion": 2,
+	"Software": { "MinimumVersion": "6.4" },
+	"OS": [
+		{ "Platform": "linux", "MinimumVersion": "0" }
+	],
+	"CodePath": "bin/limelight-openaction-x86_64-unknown-linux-gnu",
+	"CodePathLin": "bin/limelight-openaction-x86_64-unknown-linux-gnu",
+	"CodePaths": {
+		"x86_64-unknown-linux-gnu": "bin/limelight-openaction-x86_64-unknown-linux-gnu",
+		"aarch64-unknown-linux-gnu": "bin/limelight-openaction-aarch64-unknown-linux-gnu"
+	},
+	"PropertyInspectorPath": "pi/power.html",
+	"Actions": [
+		{
+			"UUID": "io.github.chimi6.limelight.power",
+			"Name": "Power",
+			"Tooltip": "Turn a light, a group or all lights on or off",
+			"Icon": "images/actions/power",
+			"PropertyInspectorPath": "pi/power.html",
+			"Controllers": ["Keypad"],
+			"SupportedInMultiActions": true,
+			"DisableAutomaticStates": true,
+			"States": [
+				{ "Image": "images/keys/power-on", "Name": "On", "TitleAlignment": "bottom" },
+				{ "Image": "images/keys/power-off", "Name": "Off", "TitleAlignment": "bottom" }
+			]
+		},
+		{
+			"UUID": "io.github.chimi6.limelight.brightness.set",
+			"Name": "Set Brightness",
+			"Tooltip": "Jump to a brightness level",
+			"Icon": "images/actions/brightness-set",
+			"PropertyInspectorPath": "pi/brightness-set.html",
+			"Controllers": ["Keypad"],
+			"SupportedInMultiActions": true,
+			"States": [{ "Image": "images/keys/brightness", "TitleAlignment": "bottom" }]
+		},
+		{
+			"UUID": "io.github.chimi6.limelight.brightness.adjust",
+			"Name": "Adjust Brightness",
+			"Tooltip": "Step brightness up or down",
+			"Icon": "images/actions/brightness-adjust",
+			"PropertyInspectorPath": "pi/brightness-adjust.html",
+			"Controllers": ["Keypad"],
+			"SupportedInMultiActions": true,
+			"States": [{ "Image": "images/keys/brightness-up", "TitleAlignment": "bottom" }]
+		},
+		{
+			"UUID": "io.github.chimi6.limelight.temperature.set",
+			"Name": "Set Temperature",
+			"Tooltip": "Jump to a colour temperature",
+			"Icon": "images/actions/temperature-set",
+			"PropertyInspectorPath": "pi/temperature-set.html",
+			"Controllers": ["Keypad"],
+			"SupportedInMultiActions": true,
+			"States": [{ "Image": "images/keys/temperature", "TitleAlignment": "bottom" }]
+		},
+		{
+			"UUID": "io.github.chimi6.limelight.temperature.adjust",
+			"Name": "Adjust Temperature",
+			"Tooltip": "Step colour temperature warmer or cooler",
+			"Icon": "images/actions/temperature-adjust",
+			"PropertyInspectorPath": "pi/temperature-adjust.html",
+			"Controllers": ["Keypad"],
+			"SupportedInMultiActions": true,
+			"States": [{ "Image": "images/keys/temperature-cooler", "TitleAlignment": "bottom" }]
+		},
+		{
+			"UUID": "io.github.chimi6.limelight.color",
+			"Name": "Set Color",
+			"Tooltip": "Set a Light Strip colour",
+			"Icon": "images/actions/color",
+			"PropertyInspectorPath": "pi/color.html",
+			"Controllers": ["Keypad"],
+			"SupportedInMultiActions": true,
+			"States": [{ "Image": "images/keys/color", "TitleAlignment": "bottom" }]
+		},
+		{
+			"UUID": "io.github.chimi6.limelight.preset",
+			"Name": "Preset",
+			"Tooltip": "Apply a saved power, brightness and temperature combination",
+			"Icon": "images/actions/preset",
+			"PropertyInspectorPath": "pi/preset.html",
+			"Controllers": ["Keypad"],
+			"SupportedInMultiActions": true,
+			"States": [{ "Image": "images/keys/preset", "TitleAlignment": "bottom" }]
+		},
+		{
+			"UUID": "io.github.chimi6.limelight.battery",
+			"Name": "Battery",
+			"Tooltip": "Show the battery level of a Key Light Mini",
+			"Icon": "images/actions/battery",
+			"PropertyInspectorPath": "pi/battery.html",
+			"Controllers": ["Keypad"],
+			"SupportedInMultiActions": false,
+			"States": [{ "Image": "images/keys/battery", "TitleAlignment": "bottom" }]
+		},
+		{
+			"UUID": "io.github.chimi6.limelight.identify",
+			"Name": "Identify",
+			"Tooltip": "Blink a light so you can tell which one it is",
+			"Icon": "images/actions/identify",
+			"PropertyInspectorPath": "pi/identify.html",
+			"Controllers": ["Keypad"],
+			"SupportedInMultiActions": true,
+			"States": [{ "Image": "images/keys/identify", "TitleAlignment": "bottom" }]
+		},
+		{
+			"UUID": "io.github.chimi6.limelight.scan",
+			"Name": "Scan",
+			"Tooltip": "Search the network for lights",
+			"Icon": "images/actions/scan",
+			"PropertyInspectorPath": "pi/scan.html",
+			"Controllers": ["Keypad"],
+			"SupportedInMultiActions": true,
+			"States": [{ "Image": "images/keys/scan", "TitleAlignment": "bottom" }]
+		},
+		{
+			"UUID": "io.github.chimi6.limelight.dial.brightness",
+			"Name": "Brightness Dial",
+			"Tooltip": "Turn to adjust brightness, push or tap to toggle power, hold to reset",
+			"Icon": "images/actions/dial-brightness",
+			"PropertyInspectorPath": "pi/dial-brightness.html",
+			"Controllers": ["Encoder"],
+			"SupportedInMultiActions": false,
+			"Encoder": {
+				"layout": "$B1",
+				"Icon": "images/dial/brightness",
+				"StackColor": "#A8FF60",
+				"TriggerDescription": {
+					"Rotate": "Adjust brightness",
+					"Push": "Toggle power",
+					"Touch": "Toggle power",
+					"LongTouch": "Reset to preset"
+				}
+			},
+			"States": [{ "Image": "images/dial/brightness" }]
+		},
+		{
+			"UUID": "io.github.chimi6.limelight.dial.temperature",
+			"Name": "Temperature Dial",
+			"Tooltip": "Turn to adjust colour temperature, push or tap to toggle power, hold to reset",
+			"Icon": "images/actions/dial-temperature",
+			"PropertyInspectorPath": "pi/dial-temperature.html",
+			"Controllers": ["Encoder"],
+			"SupportedInMultiActions": false,
+			"Encoder": {
+				"layout": "layouts/temperature.json",
+				"Icon": "images/dial/temperature",
+				"StackColor": "#A8FF60",
+				"TriggerDescription": {
+					"Rotate": "Adjust temperature",
+					"Push": "Toggle power",
+					"Touch": "Toggle power",
+					"LongTouch": "Reset to preset"
+				}
+			},
+			"States": [{ "Image": "images/dial/temperature" }]
+		}
+	]
+}

@@ -1,0 +1,6 @@
+# Local-only docs and notes (never committed)
+TEMP/
+# Build output
+target/
+dist/
+plugin/*/bin/

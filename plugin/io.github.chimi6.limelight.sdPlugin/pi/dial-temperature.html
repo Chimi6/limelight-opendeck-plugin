@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8" />
+	<link rel="stylesheet" href="common.css" />
+	<script src="common.js"></script>
+</head>
+<body data-targets="any">
+	<div class="row"><label>Target</label><div class="field"><select id="target"></select><button id="identify" hidden title="Blink this light">Blink</button></div></div>
+	<div class="hint" id="no-lights" hidden>No lights found. Press a Scan key or add lights in LimeLight.</div>
+	<div class="row"><label>Per tick</label><div class="field"><input type="number" min="25" max="500" step="25" data-setting="stepPerTick" data-default="100" /><span>K per dial step</span></div></div>
+	<div class="row"><label>Hold preset</label><div class="field"><input type="range" min="2900" max="7000" step="50" data-setting="tapPreset" data-default="4500" data-suffix="K" /><output data-for="tapPreset"></output></div></div>
+	<div class="hint">Push or tap the strip to toggle power. Long press the strip to jump to the preset.</div>
+</body>
+</html>

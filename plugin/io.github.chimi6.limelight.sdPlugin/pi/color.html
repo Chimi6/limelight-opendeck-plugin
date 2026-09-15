@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8" />
+	<link rel="stylesheet" href="common.css" />
+	<script src="common.js"></script>
+</head>
+<body data-targets="color">
+	<div class="row"><label>Target</label><div class="field"><select id="target"></select><button id="identify" hidden title="Blink this light">Blink</button></div></div>
+	<div class="hint" id="no-lights" hidden>No lights found. Press a Scan key or add lights in LimeLight.</div>
+	<div class="row"><label>Colour</label><div class="field"><input type="color" id="picker" value="#ff8800" /><output id="picker-out"></output></div></div>
+	<div class="hint">Only colour-capable lights (Light Strip) are listed.</div>
+	<script src="color-picker.js"></script>
+	<script>
+		bindColorPicker(document.getElementById("picker"), document.getElementById("picker-out"), true);
+	</script>
+</body>
+</html>
