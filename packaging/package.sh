@@ -55,7 +55,8 @@ mkdir -p "$ROOT/dist"
 ZIP="$ROOT/dist/limelight-opendeck-$VERSION.zip"
 rm -f "$ZIP"
 (cd "$ROOT/plugin" && zip -qr "$ZIP" "$UUID.sdPlugin")
-echo "==> wrote $ZIP"
+cp "$ZIP" "$ROOT/dist/limelight-opendeck.zip"
+echo "==> wrote $ZIP (and dist/limelight-opendeck.zip)"
 
 if [[ "${1:-}" == "--install" ]]; then
 	if [[ -d "$HOME/.var/app/me.amankhanna.opendeck/config/opendeck" ]]; then

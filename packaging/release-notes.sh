@@ -13,5 +13,7 @@ cat <<NOTES
 
 ## Install
 
-Download \`limelight-opendeck-$VERSION.zip\`, open OpenDeck's Plugins tab and install it from file, or paste the asset URL there. Linux x86_64 and aarch64 are included in the same zip.
+Paste this URL into the install field of OpenDeck's Plugins tab, or download \`limelight-opendeck-$VERSION.zip\` and install it from file. Linux x86_64 and aarch64 are included in the same zip.
+
+    https://github.com/Chimi6/limelight-opendeck-plugin/releases/latest/download/limelight-opendeck.zip
 NOTES
