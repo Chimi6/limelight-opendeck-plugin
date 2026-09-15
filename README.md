@@ -15,9 +15,25 @@ Control Elgato lights from a Stream Deck on Linux. A native [OpenDeck](https://g
 
 ## Setup
 
+### Option 1: install from within OpenDeck
+
+1. Open OpenDeck and go to the Plugins tab.
+2. Paste this URL into the install field and confirm:
+
+   ```
+   https://github.com/Chimi6/limelight-opendeck-plugin/releases/latest/download/limelight-opendeck-1.0.0.zip
+   ```
+
+   Once the plugin is listed in the OpenDeck plugin browser you can also find it there by searching for LimeLight.
+
+### Option 2: install from a downloaded zip
+
 1. Download `limelight-opendeck-<version>.zip` from the [latest release](https://github.com/Chimi6/limelight-opendeck-plugin/releases/latest).
-2. In OpenDeck open the Plugins tab and install it from file, or paste the asset URL.
-3. Drag an action from the LimeLight category onto a key or dial and pick a target in its settings.
+2. In OpenDeck open the Plugins tab, choose install from file, and pick the zip. Do not unzip it first.
+
+### Then
+
+Drag an action from the LimeLight category onto a key or dial and pick a target in its settings.
 
 ## Features
 
