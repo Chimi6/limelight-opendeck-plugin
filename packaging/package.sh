@@ -46,6 +46,7 @@ fetch_daemon() {
 for binary in "${BINARIES[@]}"; do
 	fetch_daemon "${binary##*/limelight-openaction-}"
 done
+chmod 755 "$BUNDLE"/bin/*
 
 echo "==> regenerating icons"
 cargo run -q --release --bin gen-icons -- "$BUNDLE/images" > /dev/null
