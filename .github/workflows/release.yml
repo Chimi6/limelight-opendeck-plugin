@@ -34,7 +34,7 @@ jobs:
       - name: Build
         run: packaging/build-binary.sh ${{ matrix.target }}
 
-      - uses: actions/upload-artifact@v5
+      - uses: actions/upload-artifact@v7
         with:
           name: binary-${{ matrix.target }}
           path: plugin/io.github.chimi6.limelight.sdPlugin/bin/limelight-openaction-${{ matrix.target }}
